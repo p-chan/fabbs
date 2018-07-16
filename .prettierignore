@@ -1,0 +1,2 @@
+database/migrations/**
+node_modules/**
