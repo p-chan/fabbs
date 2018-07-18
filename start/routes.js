@@ -16,3 +16,8 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.group(() => {
+  Route.get('auth/twitter', 'AuthController.twitterRedirect')
+  Route.get('auth/twitter/callback', 'AuthController.twitterCallback')
+}).prefix('api')
